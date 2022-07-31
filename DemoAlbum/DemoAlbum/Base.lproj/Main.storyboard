@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bpm-ne-HkX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="uCY-lQ-qpO">
+            <objects>
+                <viewController id="Bpm-ne-HkX" customClass="ViewController" customModule="DemoAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6Q-Pc-cph">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="成名在望" translatesAutoresizingMaskIntoConstraints="NO" id="lsO-5x-ZKw">
+                                <rect key="frame" x="44" y="73" width="327" height="304"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="S32-qu-m85" appends="YES" id="LtV-sK-dOi"/>
+                                    <outletCollection property="gestureRecognizers" destination="fKg-n5-XRZ" appends="YES" id="qrK-Ct-yHS"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYv-XZ-Onx">
+                                <rect key="frame" x="53" y="511" width="308" height="293"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">那黑的終點可有光 那夜的盡頭可會亮
+那成名在望 會有希望 或者是 無知的狂妄
+那又會怎麼樣 「那又會怎麼樣？」
+
+混跡過酒場的駐唱 才讀懂人性的尋常
+背負過音樂節的重量 才體會每場仗 都仰賴 槍與糧
+
+夢是把熱血和 汗與淚 熬成湯 澆灌在乾涸的 貧瘠的 現實上
+當日常的重量 讓我們 不反抗 倒地後才發現 荒地上 渺茫 希望 綻放</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-0s-azl">
+                                <rect key="frame" x="53" y="448" width="308" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="成名在望"/>
+                                    <segment title="玫瑰少年"/>
+                                    <segment title="頑固"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectAlbum:" destination="Bpm-ne-HkX" eventType="valueChanged" id="aGU-Ts-pnM"/>
+                                </connections>
+                            </segmentedControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tSQ-kP-OhS">
+                                <rect key="frame" x="149" y="399" width="116" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.74621823700000001" green="0.73408415329999999" blue="0.78163257090000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.32545261619999999" blue="0.44079539039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="changePageControl:" destination="Bpm-ne-HkX" eventType="valueChanged" id="se4-Yf-HAG"/>
+                                </connections>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZU-We-5Wn">
+                                <rect key="frame" x="53" y="389" width="47" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="pre:" destination="Bpm-ne-HkX" eventType="touchUpInside" id="xRo-RT-G39"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7S-g0-2BN">
+                                <rect key="frame" x="314" y="393" width="47" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="next:" destination="Bpm-ne-HkX" eventType="touchUpInside" id="kvs-RR-HJj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yWO-Cl-Qbj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="albumImageView" destination="lsO-5x-ZKw" id="tTj-I3-whm"/>
+                        <outlet property="albumPageControl" destination="tSQ-kP-OhS" id="z4A-Jl-A3d"/>
+                        <outlet property="albumSegmentedControl" destination="8vg-0s-azl" id="P6T-tK-edJ"/>
+                        <outlet property="lyricsLabel" destination="eYv-XZ-Onx" id="bEw-Qo-fc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TpY-0W-md3" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="S32-qu-m85">
+                    <connections>
+                        <action selector="changePage:" destination="Bpm-ne-HkX" id="mbU-Nv-kfP"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="fKg-n5-XRZ">
+                    <connections>
+                        <action selector="changePage:" destination="Bpm-ne-HkX" id="3VK-nO-VkL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="460.71428571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="成名在望" width="1280" height="720"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
